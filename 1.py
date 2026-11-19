@@ -33,6 +33,20 @@ def inorder(temp): #recursive
         inorder(temp.left)
         print(temp.data,end=" ")
         inorder(temp.right)
+def preorder(temp): #recursive
+    if temp is None:
+        return
+    else:
+        print(temp.data,end=" ")
+        inorder(temp.left)
+        inorder(temp.right)
+def postorder(temp): #recursive
+    if temp is None:
+        return
+    else:
+        inorder(temp.left)
+        inorder(temp.right)
+        print(temp.data,end=" ")
 b = BST()
 b.insert(Node(10))
 b.insert(Node(5))
@@ -41,6 +55,13 @@ b.insert(Node(-2))
 b.insert(Node(7))
 b.insert(Node(15))
 b.insert(Node(30))
+print("Display in inorder")
 inorder(b.root)
+print()
+print("Display in preorder")
+preorder(b.root)
+print()
+print("Display in postorder")
+postorder(b.root)
 
                 
