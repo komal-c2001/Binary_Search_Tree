@@ -43,7 +43,7 @@ class BST:
         arr.append(root)
         while cnt < len(arr):
             node_count = len(arr) - cnt # no of node to be visited
-            print("\n Level ",level,": ",end =" ")
+            print("\nLevel ",level,": ",end =" ")
             for i in range(node_count):
                 temp = arr[cnt]
                 cnt += 1
@@ -53,6 +53,7 @@ class BST:
                 if temp.right:
                     arr.append(temp.right)
             level += 1
+        print("\nHeight of tree : ",level-1)
 b = BST()
 b.insert(Node(100))
 b.insert(Node(10))
